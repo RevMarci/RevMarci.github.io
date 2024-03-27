@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/search-bar.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="images/icons/menubar2.png" alt="" id="menu-checkbox">
+        </label>
+    
+        <a href="index.html"><img src="images/icons/bird2.png" alt=""></a>
+        <ul>
+            <!--
+                "Az oldal rendelkezésre áll, a főoldalról elérhető, az oldalról el lehet navigálni"
+
+                A login és a payment oldal a 2. mérföldköre már nem lesz itt.
+                Ha nem vagy bejelentkezve és profilra nyomsz, akkor fog a loginre dobni.
+                A payment oldal pedig a Kosár -> Megvásárlás gombra lesz elérhető.
+                
+                A nav bar nem lesz megjelenítve a login, payment oldalon.
+                Hasonló stílusban lesznek ezek az oldalak mint ami a gmail bejelentkezésnél van.
+            -->
+            <li><a href="login.html">login</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="select-flight.html">Kereső</a></li>
+
+            <li><a href="kosar.html">Kosár</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Turul Erlájnz</h1>
+        <h2>Zrt.</h2>
+    </header>
+
+    <form id="searchBar">
+        <div>
+            <label for="from">Honnan:</label>
+            <label for="to">Hova:</label>
+            <label for="depart">Mikor:</label>
+        </div>
+        <div>
+            <input type="search" id="from" name="from">
+            <input type="search" id="to" name="to">
+            <input type="date" id="depart" name="depart">
+            <a href="select-flight.html">Keres</a>
+        </div>
+    </form>
+
+    <main>
+        <div class="flip-card">
+            <div class="flip-card-inner" id="paris" onclick="location.href='select-flight.html'">
+                <div class="front">
+                    <p>Párizs</p>
+                </div>
+                <div class="back">
+                    <h2>20000Ft</h2>
+                    <h1>10000Ft</h1>
+                    <p>Kedvezményes utazás</p>
+                    <p>Párizsba</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" id="prague" onclick="location.href='select-flight.html'">
+                <div class="front">
+                    <p>Prága</p>
+                </div>
+                <div class="back">
+                    <h2>12500Ft</h2>
+                    <h1>6000Ft</h1>
+                    <p>Kedvezményes utazás</p>
+                    <p>Prágába</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" id="tokyo" onclick="location.href='select-flight.html'">
+                <div class="front">
+                    <p>Tokyo</p>
+                </div>
+                <div class="back">
+                    <h2>38000Ft</h2>
+                    <h1>21800Ft</h1>
+                    <p>Kedvezményes utazás</p>
+                    <p>Tokyoba</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner" id="newyork" onclick="location.href='select-flight.html'">
+                <div class="front">
+                    <p>New York</p>
+                </div>
+                <div class="back">
+                    <h2>41000Ft</h2>
+                    <h1>30000Ft</h1>
+                    <p>Kedvezményes utazás</p>
+                    <p>New Yorkba</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

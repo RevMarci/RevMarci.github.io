@@ -1,0 +1,312 @@
+:root {
+    --middle-gray: #6b727b;
+}
+
+/* A scroll bar jobb oldalt folyamatosan ott van */
+body {
+    overflow-y: scroll;
+    background-image: url("../images/HomePageBG.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* {
+    border: 1px solid red;
+}*/
+
+.select-flight-title {
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 10px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid var(--purple-5);
+}
+
+.select-flight-title p {
+    margin: 0 20px;
+    display: inline;
+    width: 100px;
+}
+
+.select-flight-list{
+    margin: auto;
+    width: 800px;
+    max-width: 100%;
+    padding: 15px 15px;
+    padding-top: 0;
+}
+
+.select-flight-card {
+    border: 5px solid var(--purple-4);
+    border-radius: 1em;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+    transition: .4s;
+    
+    &:hover {
+        border-color: var(--purple-6);
+    }
+}
+
+.flight-data {
+    justify-content: space-between;
+    display: block;
+}
+
+.where-to-where {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.from-where, .to-where {
+    font-size: 40px;
+}
+
+.to-where {
+    text-align: right;
+    left: 0;
+}
+
+.time {
+    display: inline;
+    margin: 0 30px;
+    margin-bottom: 20px;
+}
+
+.take-off, .landing {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.air {
+    color: var(--middle-gray);
+}
+
+.select-flight-card input {
+    display: none;
+}
+
+.buttons label {
+    margin-top: 10px;
+    width: 80%;
+    height: 35px;
+    background-color: var(--purple-3);
+    border-radius: 5px;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--purple-4);
+        cursor: pointer;
+    }
+}
+
+.arrow {
+    border: solid var(--purple-8);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.select-flight-card input[type="checkbox"]:checked ~ .buttons label .arrow {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    margin-top: 14px;
+}
+
+.select-flight-card input[type="checkbox"]:checked ~ .more {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    justify-content: space-between;
+    display: flex;
+}
+
+.buttons button {
+    margin-top: 10px;
+    width: 18%;
+    height: 35px;
+    background-color: var(--green-4);
+    color: var(--green-10);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--green-6);
+        color: var(--green-1);
+    }
+}
+
+.cost {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.cost p:last-of-type {
+    font-weight: bold;
+}
+
+.select-flight-card hr {
+    border-top: 1px solid var(--purple-4);
+    margin: auto;
+    width: 90%;
+}
+
+.select-flight-card hr:first-of-type {
+    margin-top: 20px;
+}
+
+/* lenyilo kartya */
+.more {
+    display: none;
+}
+
+.more hr {
+    border-top: 1px solid var(--purple-4);
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 10px !important;
+}
+
+.more div {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.more div p {
+    padding-top: 3px;
+}
+
+.more div img {
+    height: 25px;
+}
+
+
+/* Pop up uzenet */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--green-8);
+    color: var(--green-3);
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+  
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+/* Mobil nezet */
+@media only screen and (max-width: 768px) {
+    .select-flight-title {
+        margin-top: 10px;
+        padding: 5px 5px;
+        width: 95%;
+        margin-bottom: 0px;
+    }
+
+    .select-flight-title p {
+        margin: 0 7px;
+    }
+
+    .select-flight-card {
+        margin-top: 20px;
+    }
+
+    .select-flight-card:first-of-type {
+        margin-top: 10px;
+    }
+
+    .from-where, .to-where {
+        font-size: 30px;
+    }
+
+    .take-off, .landing {
+        font-size: 20px;
+    }
+
+    .time {
+        margin: 10px 20px;
+    }
+
+    .buttons label {
+        width: 47%;
+    }
+
+    .buttons label:hover {
+        background-color: var(--purple-2);
+    }
+
+    .buttons button {
+        width: 47%;
+    }
+
+    .cost {
+        width: 90%;
+    }
+
+    .more div {
+        width: 90%;
+    }
+
+    .more hr {
+        width: 100%;
+    }
+
+    .select-flight-card hr {
+        width: 100%;
+    }
+}

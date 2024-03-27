@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/search-bar.css">
+    <link rel="stylesheet" href="styles/select-flight.css">
+    <title>Repülő kereső</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="images/icons/menubar2.png" alt="" id="menu-checkbox">
+        </label>
+    
+        <a href="index.html"><img src="images/icons/bird2.png" alt=""></a>
+        <ul>
+            <!--
+                "Az oldal rendelkezésre áll, a főoldalról elérhető, az oldalról el lehet navigálni"
+
+                A login és a payment oldal a 2. mérföldköre már nem lesz itt.
+                Ha nem vagy bejelentkezve és profilra nyomsz, akkor fog a loginre dobni.
+                A payment oldal pedig a Kosár -> Megvásárlás gombra lesz elérhető.
+                
+                A nav bar nem lesz megjelenítve a login, payment oldalon.
+                Hasonló stílusban lesznek ezek az oldalak mint ami a gmail bejelentkezésnél van.
+            -->
+            <li><a href="login.html">login</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="select-flight.html">Kereső</a></li>
+
+            <li><a href="kosar.html">Kosár</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="searchBar">
+            <div>
+                <label for="from">Honnan:</label>
+                <label for="to">Hova:</label>
+                <label for="depart">Mikor:</label>
+            </div>
+            <div>
+                <input type="search" id="from" name="from">
+                <input type="search" id="to" name="to">
+                <input type="date" id="depart" name="depart">
+                <a href="select-flight.html">Keres</a>
+            </div>
+        </form>
+
+        <div class="select-flight-title">
+            <p>Dubai</p>
+            <p>London</p>
+            <p>2024 Marc. 19.</p>
+        </div>
+        <div class="select-flight-list">
+            <div class="select-flight-card">
+                <div class="where-to-where">
+                    <p class="from-where">Dubai</p>
+                    <p class="to-where">London</p>
+                </div>
+                
+                <p class="take-off time">8:00</p>
+                <p class="air time">2:40</p>
+                <p class="landing time">10:40</p>
+
+                <hr>
+                <div class="cost">
+                    <p>Ár/Fő</p>
+                    <P>20000Ft</P>
+                </div>
+                <hr>
+
+                <input type="checkbox" name="card-accordion" id="card-more-1">
+                <div class="more">
+                    <div>
+                        <p>Ingyenes kézi poggyász</p>
+                        <img src="images/icons/backpack.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Nincs ülőhelyválasztás</p>
+                        <img src="images/icons/seat.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Ingyenes poggyász 10kg-ig</p>
+                        <img src="images/icons/suitcases.png" alt="">
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="buttons">
+                    <label for="card-more-1">
+                        <i class="arrow"></i>
+                    </label>
+                    <button onclick="popup()">
+                        Kosárba
+                    </button>
+                </div>
+            </div>
+            <div class="select-flight-card">
+                <div class="where-to-where">
+                    <p class="from-where">Dubai</p>
+                    <p class="to-where">London</p>
+                </div>
+                
+                <p class="take-off time">12:00</p>
+                <p class="air time">2:40</p>
+                <p class="landing time">14:40</p>
+
+                <hr>
+                <div class="cost">
+                    <p>Ár/Fő</p>
+                    <P>20000Ft</P>
+                </div>
+                <hr>
+
+                <input type="checkbox" name="card-accordion" id="card-more-2">
+                <div class="more">
+                    <div>
+                        <p>Ingyenes kézi poggyász</p>
+                        <img src="images/icons/backpack.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Nincs ülőhelyválasztás</p>
+                        <img src="images/icons/seat.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Ingyenes poggyász 10kg-ig</p>
+                        <img src="images/icons/suitcases.png" alt="">
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="buttons">
+                    <label for="card-more-2">
+                        <i class="arrow"></i>
+                    </label>
+                    <button onclick="popup()">
+                        Kosárba
+                    </button>
+                </div>
+            </div>
+            <div class="select-flight-card">
+                <div class="where-to-where">
+                    <p class="from-where">Dubai</p>
+                    <p class="to-where">London</p>
+                </div>
+                
+                <p class="take-off time">19:30</p>
+                <p class="air time">2:40</p>
+                <p class="landing time">22:10</p>
+
+                <hr>
+                <div class="cost">
+                    <p>Ár/Fő</p>
+                    <P>20000Ft</P>
+                </div>
+                <hr>
+
+                <input type="checkbox" name="card-accordion" id="card-more-3">
+                <div class="more">
+                    <div>
+                        <p>Ingyenes kézi poggyász</p>
+                        <img src="images/icons/backpack.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Nincs ülőhelyválasztás</p>
+                        <img src="images/icons/seat.png" alt="">
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Ingyenes poggyász 10kg-ig</p>
+                        <img src="images/icons/suitcases.png" alt="">
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="buttons">
+                    <label for="card-more-3">
+                        <i class="arrow"></i>
+                    </label>
+                    <button onclick="popup()">
+                        Kosárba
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="snackbar">Hozzáadva a kosaradhoz!</div>
+
+        <script>
+            function popup() {
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+        </script>
+    </main>
+</body>
+</html>

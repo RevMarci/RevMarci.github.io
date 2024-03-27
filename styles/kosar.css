@@ -1,0 +1,182 @@
+:root {
+    --black-2: #d6d8db;
+    --black-6: #6b727b;
+    --red-1: #fbe9eb;
+    --red-7: #c42230;
+    --green-8: #238f3a;
+}
+
+body {
+    background-image: url("../images/HomePageBG.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+p:first-child {
+    color: var(--purple-8);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main hr {
+    border-top: 3px solid var(--purple-7);
+    margin-top: 12px;
+}
+
+main hr:last-of-type {
+    margin-bottom: 50px;
+}
+
+.flight-card {
+    width: 95%;
+    margin: auto;
+    border-bottom: 2px solid var(--purple-6);
+}
+
+.flight-card:last-of-type {
+    border-bottom: none;
+}
+
+.flight-card table {
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+.flight-card table tr {
+    height: 40px;
+    border-radius: 10px;
+    border-top: 1px solid var(--purple-4);
+}
+
+.flight-card table tr:first-child {
+    border-top: none;
+}
+
+.flight-card table tr td {
+    padding: 0 10px;
+    padding-top: 2px;
+}
+
+.flight-card table tr:hover {
+    background-color: var(--purple-1);
+    transition: 0.1s;
+}
+
+.flight-card table tr td:last-child {
+    text-align: right;
+}
+
+.flight-card p {
+    font-size: small;
+    color: var(--black-6);
+    padding-left: 30px;
+}
+
+.flight-card a {
+    text-decoration: underline;
+    color: var(--purple-8);
+    padding: 2px;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: var(--purple-2);
+    }
+}
+
+.buttons {
+    width: 600px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttons a {
+    width: 150px;
+    padding: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2em;
+}
+
+.buttons a:first-child {
+	border: .2em solid var(--red-7);
+    color: var(--red-7);
+    transition: 0.5s;
+    &:hover {
+		background-color: var(--red-7);
+		color: var(--red-1);
+	}
+}
+
+.buttons a:last-child {
+	border: .2em solid var(--green-8);
+    color: var(--green-8);
+    transition: 0.5s;
+    &:hover {
+		background-color: var(--green-8);
+		color: var(--green-1);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 100%;
+    }
+
+    p:first-child {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    p:first-child {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    main hr {
+        width: 98%;
+        margin: auto;
+    }
+
+    .flight-card {
+        width: 95%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .buttons a {
+        width: 47%;
+    }
+
+    .flight-card table {
+        width: 95%;
+    }
+
+    .flight-card p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

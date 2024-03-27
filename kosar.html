@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/kosar.css">
+    <title>Kosár</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="images/icons/menubar2.png" alt="" id="menu-checkbox">
+        </label>
+    
+        <a href="index.html"><img src="images/icons/bird2.png" alt=""></a>
+        <ul>
+            <!--
+                "Az oldal rendelkezésre áll, a főoldalról elérhető, az oldalról el lehet navigálni"
+
+                A login és a payment oldal a 2. mérföldköre már nem lesz itt.
+                Ha nem vagy bejelentkezve és profilra nyomsz, akkor fog a loginre dobni.
+                A payment oldal pedig a Kosár -> Megvásárlás gombra lesz elérhető.
+                
+                A nav bar nem lesz megjelenítve a login, payment oldalon.
+                Hasonló stílusban lesznek ezek az oldalak mint ami a gmail bejelentkezésnél van.
+            -->
+            <li><a href="login.html">login</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="select-flight.html">Kereső</a></li>
+
+            <li><a href="kosar.html">Kosár</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>Kosaradban lévő termékek</p>
+        <hr>
+
+        <div class="flight-card">
+            <table>
+                <tr>
+                    <td>Honnan</td>
+                    <td>Dubai</td>
+                </tr>
+                <tr>
+                    <td>Hova</td>
+                    <td>London</td>
+                </tr>
+                <tr>
+                    <td>Dátum</td>
+                    <td>2024.03.18</td>
+                </tr>
+                <tr>
+                    <td>Indulás</td>
+                    <td>12:00</td>
+                </tr>
+                <tr>
+                    <td>Utazási idő</td>
+                    <td>2:40</td>
+                </tr>
+                <tr>
+                    <td>Érkezés</td>
+                    <td>14:40</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg-ig</td>
+                    <td>Ingyenes</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg felett</td>
+                    <td>1000Ft / további 5kg</td>
+                </tr>
+                <tr>
+                    <td>Ár / Utas</td>
+                    <td>20 000Ft</td>
+                </tr>
+            </table>
+
+            <p>A repülőgépre való felszállás, indulás előtt 3 órával kezdődik.</p>
+            <p>A repülőjegy visszatérítése nem lehetséges.</p>
+            <p>A repülőjegy megvásárlásával elfogadja a visszatérítési, szolgáltatási feltételeket, illetve az adatvédelmi irányelveket.</p>
+            <p>További <a href="FAQ.html">információkat itt</a> talál.</p>
+
+            <div class="buttons">
+                <a>Törlés</a>
+                <a href="payment.html">Megvásárlás</a>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <table>
+                <tr>
+                    <td>Honnan</td>
+                    <td>Budapes</td>
+                </tr>
+                <tr>
+                    <td>Hova</td>
+                    <td>London</td>
+                </tr>
+                <tr>
+                    <td>Dátum</td>
+                    <td>2024.03.24</td>
+                </tr>
+                <tr>
+                    <td>Indulás</td>
+                    <td>6:00</td>
+                </tr>
+                <tr>
+                    <td>Utazási idő</td>
+                    <td>1:40</td>
+                </tr>
+                <tr>
+                    <td>Érkezés</td>
+                    <td>7:40</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg-ig</td>
+                    <td>Ingyenes</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg felett</td>
+                    <td>1000Ft / további 5kg</td>
+                </tr>
+                <tr>
+                    <td>Ár / Utas</td>
+                    <td>12 000Ft</td>
+                </tr>
+            </table>
+
+            <p>A repülőgépre való felszállás, indulás előtt 3 órával kezdődik.</p>
+            <p>A repülőjegy visszatérítése nem lehetséges.</p>
+            <p>A repülőjegy megvásárlásával elfogadja a visszatérítési, szolgáltatási feltételeket, illetve az adatvédelmi irányelveket.</p>
+            <p>További <a href="FAQ.html">információkat itt</a> talál.</p>
+
+            <div class="buttons">
+                <a>Törlés</a>
+                <a href="payment.html">Megvásárlás</a>
+            </div>
+        </div>
+
+        <div class="flight-card">
+            <table>
+                <tr>
+                    <td>Honnan</td>
+                    <td>Tokyo</td>
+                </tr>
+                <tr>
+                    <td>Hova</td>
+                    <td>Sydney</td>
+                </tr>
+                <tr>
+                    <td>Dátum</td>
+                    <td>2024.04.09</td>
+                </tr>
+                <tr>
+                    <td>Indulás</td>
+                    <td>15:30</td>
+                </tr>
+                <tr>
+                    <td>Utazási idő</td>
+                    <td>3:55</td>
+                </tr>
+                <tr>
+                    <td>Érkezés</td>
+                    <td>19:25</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg-ig</td>
+                    <td>Ingyenes</td>
+                </tr>
+                <tr>
+                    <td>Poggyász 10kg felett</td>
+                    <td>1000Ft / további 5kg</td>
+                </tr>
+                <tr>
+                    <td>Ár / Utas</td>
+                    <td>69 420Ft</td>
+                </tr>
+            </table>
+
+            <p>A repülőgépre való felszállás, indulás előtt 3 órával kezdődik.</p>
+            <p>A repülőjegy visszatérítése nem lehetséges.</p>
+            <p>A repülőjegy megvásárlásával elfogadja a visszatérítési, szolgáltatási feltételeket, illetve az adatvédelmi irányelveket.</p>
+            <p>További <a href="FAQ.html">információkat itt</a> talál.</p>
+
+            <div class="buttons">
+                <a>Törlés</a>
+                <a href="payment.html">Megvásárlás</a>
+            </div>
+        </div>
+        <hr>
+    </main>
+</body>
+</html>

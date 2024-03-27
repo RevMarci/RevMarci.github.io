@@ -1,0 +1,250 @@
+:root {
+    --background-color: #f1f2f3;
+
+    --purple-1: #f1eafa;
+    --purple-2: #d5c1f0;
+    --purple-7: #522290;
+    --purple-8: #3a1867;
+}
+
+
+/* {
+    border: 1px solid red;;
+}*/
+
+body {
+    background-image: url("../images/HomePageBG.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    margin: auto;
+    display: inline;
+    justify-content: space-between;
+}
+
+main > div {
+    width: 1100px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+aside {
+    width: 25%;
+    display: block;
+    position: sticky;
+    top: 40px;
+    height: 350px;
+}
+
+aside img {
+    width: 60%;
+    margin-left: 10%;
+    border: 5px solid var(--purple-7);
+    border-radius: 50%;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--purple-1);
+    }
+}
+
+aside p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--purple-7);
+}
+
+aside p {
+    width: 80%;
+    align-items: center;
+    color: var(--purple-7);
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 1em;
+    margin-top: 5px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--purple-2);
+    }
+}
+
+section {
+    width: 80%;
+}
+
+section > h2 {
+    color: var(--purple-8);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+section > hr {
+    border-top: 3px solid var(--purple-7);
+    margin-bottom: 20px;
+}
+
+.ticket {
+    background-color: var(--background-color);
+    width: 90%;
+    margin: auto;
+    border: 2px solid var(--purple-7);
+    border-radius: 8px;
+    border-bottom: 17px solid var(--purple-7);
+    margin-bottom: 30px;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 2px 12px 15px #999;
+        transform: translateY(-4px);
+    }
+}
+
+.ticket header {
+    background-color: var(--purple-7);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+}
+
+.ticket header img {
+    width: 50px;
+    scale: 1.3;
+    margin-left: 25px;
+    margin-top: 0;
+    background-color: var(--purple-7);
+    border: 3px solid var(--background-color);
+    border-radius: 50%;
+    transform: translateY(40%);
+    z-index: 0;
+}
+
+.ticket header div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ticket header p {
+    color: var(--background-color);
+}
+
+.ticket header p:first-of-type {
+    padding-left: 30px;
+    font-size: 23px;
+}
+
+.ticket header p:last-of-type {
+    padding-right: 30px;
+}
+
+.ticket-information {
+    display: flex;
+    font-size: 15px;
+}
+
+.barcode {
+    width: 100px;
+    height: 220px;
+    border-right: 1px solid var(--purple-7);
+}
+
+.barcode img {
+    transform: rotate(90deg) translate(95px, 41px);
+    width: 170px;
+}
+
+.data {
+    display: flex;
+    width: 100%;
+}
+
+.data table {
+    margin-left: 20px;
+    width: 100%;
+}
+
+.data td {
+    padding-left: 12px;
+}
+
+.data td p:last-child {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1150px) {
+    main > div {
+        width: 930px;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    main > div {
+        width: 90%;
+        display: block;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    aside p {
+        width: 100%;
+    }
+
+    aside img {
+        width: 100px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ticket-information {
+        display: block;
+    }
+
+    section > h2 {
+        font-size: 20px;
+    }
+
+    .ticket header p:first-of-type {
+        padding-left: 15px;
+        font-size: 18px;
+    }
+
+    .ticket header p:last-of-type {
+        font-size: 13px;
+    }
+
+    .barcode {
+        width: 100%;
+        height: 140px;
+        border-right: none;
+        border-bottom: 1px solid var(--purple-7);
+    }
+    
+    .barcode img {
+        transform: rotate(0) translate(12%, 45%);
+        width: 80%;
+    }
+
+    .data table {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

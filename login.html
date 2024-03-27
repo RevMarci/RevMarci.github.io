@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Bejelentkezés</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="images/icons/menubar2.png" alt="" id="menu-checkbox">
+        </label>
+    
+        <a href="index.html"><img src="images/icons/bird2.png" alt=""></a>
+        <ul>
+            <!--
+                "Az oldal rendelkezésre áll, a főoldalról elérhető, az oldalról el lehet navigálni"
+
+                A login és a payment oldal a 2. mérföldköre már nem lesz itt.
+                Ha nem vagy bejelentkezve és profilra nyomsz, akkor fog a loginre dobni.
+                A payment oldal pedig a Kosár -> Megvásárlás gombra lesz elérhető.
+                
+                A nav bar nem lesz megjelenítve a login, payment oldalon.
+                Hasonló stílusban lesznek ezek az oldalak mint ami a gmail bejelentkezésnél van.
+                A select-flight a kereső használatával lesz elérhető
+            -->
+            <li><a href="login.html">login</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="select-flight.html">Kereső</a></li>
+
+            <li><a href="kosar.html">Kosár</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+    <img id="bg-img" src="images/airport.jpg" alt="">
+    <div>
+        <div>
+            <input type="checkbox" id="login-to-register">
+
+            <!-- Bejelentkezo form -->
+            <form id="login">
+                <p>Bejelentkezés</p>
+                <label> E-mail cím</label>
+                <input type="email" required>
+                
+                <label> Jelszó</label> 
+                <input type="password" required>
+
+                <button>Bejelentkezés</button>
+            </form>
+
+            <form id="register">
+                <p>Regisztráció</p>
+                <label>Név</label>
+                <input type="text" placeholder="Tüdőr" required>
+                <input type="text" placeholder="Ákos" required>
+
+                <label>Születési dátum</label>
+                <input type="date" id="date" required>
+
+                <label>Telefonszám</label>
+                <input type="text" placeholder="+36208230600" required>
+
+                <label> E-mail cím</label>
+                <input type="email" placeholder="tudorakos@citromail.hu" required>
+                
+                <label> Jelszó</label> 
+                <input type="text" required>
+
+                <label> Jelszó megint</label> 
+                <input type="text" required>
+
+                <button>Regisztráció</button>
+            </form>
+
+            <label for="login-to-register">Nincs profilod? Regisztráció</label>
+            <label for="login-to-register">Van már profilom. Bejelentkezés</label>
+
+            <!--
+            <button>Bejelentkezés</button>
+            <button>Regisztráció</button>
+            -->
+        </div>
+    </div>
+    <script>
+        const dateInput = document.getElementById('date');
+        
+        // Function to handle changes in the input value
+        function handleInputChange() {
+          if (dateInput.value) {
+            dateInput.classList.add('selected');
+          } else {
+            dateInput.classList.remove('selected');
+          }
+        }
+        
+        // Event listeners to handle input focus and value changes
+        dateInput.addEventListener('change', handleInputChange);
+        dateInput.addEventListener('blur', handleInputChange);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+#searchBar {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 93%;
+    background-color: var(--purple-6);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchBar div {
+    width: 100%;
+    display: flex;
+}
+
+#searchBar label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--purple-3);
+}
+
+#searchBar label:first-of-type {
+    width: 22%;
+}
+
+#searchBar label:nth-of-type(2) {
+    width: 24%;
+}
+
+#searchBar input, #searchBar a {
+    outline: none;
+    border: none;
+    height: 30px;
+    background-color: var(--purple-8);
+    border-radius: 1em;
+    color: var(--purple-3);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#searchBar input {
+    width: 22%;
+    transition: 0.4s;
+
+    &:hover, &:active, &:focus {
+        background-color: var(--purple-5);
+        color: var(--purple-2);
+    }
+}
+
+#searchBar input:first-of-type {
+    border-radius: 1em 0.3em 0.3em 1em;
+    margin-right: 2px;
+}
+
+#searchBar input:nth-of-type(2) {
+    border-radius: 0.3em 1em 1em 0.3em;
+    margin-right: 10px;
+}
+
+#searchBar input[type="date"] {
+    margin-right: 10px;
+}
+
+#searchBar a {
+    width: 30%;
+    border: 1px solid var(--purple-8);
+    text-align: center;
+    padding-top: 6px;
+    transition: 0.4s;
+
+    &:hover, &:active, &:focus {
+        background-color: var(--purple-3);
+        color: var(--purple-8);
+        box-shadow: 0 0 10px 1px var(--purple-2-rgba);
+        border: 1px solid var(--purple-8);
+    }
+}

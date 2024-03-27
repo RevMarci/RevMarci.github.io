@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <title>Payment</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <img src="images/icons/menubar2.png" alt="" id="menu-checkbox">
+        </label>
+    
+        <a href="index.html"><img src="images/icons/bird2.png" alt=""></a>
+        <ul>
+            <!--
+                "Az oldal rendelkezésre áll, a főoldalról elérhető, az oldalról el lehet navigálni"
+
+                A login és a payment oldal a 2. mérföldköre már nem lesz itt.
+                Ha nem vagy bejelentkezve és profilra nyomsz, akkor fog a loginre dobni.
+                A payment oldal pedig a Kosár -> Megvásárlás gombra lesz elérhető.
+                
+                A nav bar nem lesz megjelenítve a login, payment oldalon.
+                Hasonló stílusban lesznek ezek az oldalak mint ami a gmail bejelentkezésnél van.
+            -->
+            <li><a href="login.html">login</a></li>
+            <li><a href="payment.html">Payment</a></li>
+            <li><a href="select-flight.html">Kereső</a></li>
+
+            <li><a href="kosar.html">Kosár</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+<main>
+    <div>
+        <div>
+            <form id="payment">
+                <p>Vásárlás véglegesítése</p>
+
+                <label for="utasok">Hányan szeretnének utazni:
+                    <input type="number" id="utasok" max="10" min="1" value="1">
+                </label>
+                
+                <table>
+                    <tbody>
+                        <script src="script/payment.js"></script>
+                    </tbody>
+                </table>
+                <p>A bal oldalon van a repülőgép eleje.</p>
+
+                <label for="luggage">Poggyász súlya (kg):
+                    <input type="number" id="luggage" max="100" min="1" value="10">
+                </label>
+                <p>10kg-ig/fő ingenes, utána minden megkezdett 5kg +2000Ft-ba fáj. xd</p>
+                <hr>
+
+                <label> Kártyára írt név:</label>
+                <input type="text" required>
+
+                <label> Kártyaszám:</label>
+                <input type="number" required>
+
+                <label> Lejárati dátum:</label>
+                <input type="month" id="dateInput" name="dateInput" required>
+
+                <label>CVC:</label>
+                <input type="number" required>
+
+                <div id="printOut">
+                    <div>
+                        <p>Utasok</p>
+                        <p id="printOutTicketCost">20000Ft</p>
+                    </div>
+                    <div>
+                        <p>Poggyászok</p>
+                        <p id="printOutLuggageCost">0Ft</p>
+                    </div>
+                    <div>
+                        <p>Végösszeg</p>
+                        <p id="printOutCost">20000Ft</p>
+                    </div>
+                </div>
+                <hr>
+
+                <button type="submit">Fizetés</button>
+            </form>
+
+            
+        </div>
+    </div>
+</main>
+</body>
+</html>

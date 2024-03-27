@@ -1,0 +1,257 @@
+:root {
+    --black-1: #f1f2f3;
+    --black-1-rgba: rgba(241, 242, 243, 0.7);
+
+    --purple-2: #d5c1f0;
+    --purple-5: #8245d3;
+    --purple-6: #692cba;
+    --purple-7: #522290;
+    --purple-10: #0c0515;
+}
+
+/* {border: 1px solid red;}*/
+
+* {
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: var(--text-color);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+body {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#bg-img {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(7px);
+    z-index: -10;
+}
+
+body div {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+body div div {
+    position: relative;
+    width: 400px;
+    min-height: 530px;
+    height: auto;
+    margin: auto;
+    top: 53%;
+    transform: translateY(-50%);
+    padding-top: 17px;
+    padding-bottom: 150px;
+    background-color: var(--black-1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px var(--black-1-rgba);
+}
+
+form {
+    margin-top: 30px;
+    margin-bottom: 17px;
+}
+
+form p {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin: auto;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: var(--purple-7);
+}
+
+form input {
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 35px;
+    appearance: none;
+	border: none;
+	outline: none;
+    border: 3px solid var(--purple-5);
+    color: var(--purple-5);
+    border-radius: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: 1s;
+
+    &:hover, &:active, &:focus {
+        border-color: var(--purple-7);
+        color: var(--purple-7);
+    }
+}
+
+form input[type="date"] {
+    &::-webkit-calendar-picker-indicator {
+        background-image: url(../images/icons/calendar.png);
+    }
+    &:hover, &:active, &:focus {
+        &::-webkit-calendar-picker-indicator {
+            background-image: url(../images/icons/calendar2.png);
+        }
+    }
+}
+
+input[type="date"]:not([value=""]) {
+    color: var(--purple-2);
+}
+
+input[type="date"].selected {
+    color: var(--purple-5);
+
+    &:hover {
+        color: var(--purple-7) !important;
+    }
+}
+
+::placeholder {
+    color: var(--purple-2);
+
+    &:hover, &:active, &:focus {
+        color: var(--purple-7);
+    }
+}
+
+form[id="register"] input:nth-of-type(1) {
+    display: inline;
+    position: relative;
+    width: 35%;
+    border-radius: 5em 0 0 5em;
+    margin-right: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    border-right: 1px solid;
+}
+
+form[id="register"] input:nth-of-type(2) {
+    display: inline;
+    width: 35%;
+    border-radius: 0 5em 5em 0;
+    margin-left: 0;
+    padding-left: 0.8em;
+    right: 50%;
+    transform: translateX(40%);
+    border-left: 1px solid;
+}
+
+button {
+    appearance: none;
+    position: absolute;
+    bottom: 50px;
+    display: block;
+	border: 3px solid var(--purple-5);
+    background: var(--black-1);
+    color: var(--green-10);
+    border-radius: 5em;
+    transition: 0.5s;
+    width: 200px;
+    height: 40px;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%);
+
+    &:hover {
+		background-color: var(--purple-7);
+		color: var(--purple-2);
+        border-color: var(--purple-7);
+	}
+}
+
+input[id="login-to-register"], form[id="register"], label[for="login-to-register"]:last-of-type, form[id="register"] button{
+    display: none;
+}
+
+input[id="login-to-register"]:checked ~ form[id="login"] {
+    display: none;
+}
+
+input[id="login-to-register"]:checked ~ form[id="register"] {
+    display: block;
+}
+
+input[id="login-to-register"]:checked ~ label[for="login-to-register"]:first-of-type {
+    display: none;
+}
+
+input[id="login-to-register"]:checked ~ label[for="login-to-register"]:last-of-type {
+    display: block;
+}
+
+input[id="login-to-register"]:checked ~ form[id="login"]form[id="login"] button {
+    display: none;
+}
+
+input[id="login-to-register"]:checked ~ form[id="register"] button {
+    display: block;
+}
+
+div > label {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+    color: var(--purple-5);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--purple-7);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body div div {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding-top: 20px;
+        background-color: var(--black-1-rgba);
+
+        padding-top: 60px;
+    }
+}
+
+
+@media only screen and (max-height: 880px) {
+    body div div {
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    button {
+        position: relative;
+        bottom: 0;
+        margin-top: 30px;
+    }
+}

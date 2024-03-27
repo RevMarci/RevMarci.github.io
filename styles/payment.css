@@ -1,0 +1,242 @@
+:root {
+    --black-1: #f1f2f3;
+    --black-1-rgba: rgba(241, 242, 243, 0.7);
+    --black-2: #d6d8db;
+    --black-7: #53585f;
+
+    --purple-2: #d5c1f0;
+    --purple-5: #8245d3;
+    --purple-6: #692cba;
+    --purple-7: #522290;
+    --purple-10: #0c0515;
+}
+
+* {
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: var(--text-color);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+body {
+    margin: 0;
+
+    background-image: url("../images/HomePageBG.png");
+    background-size: cover;
+    background-position: center;
+}
+
+body > div {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+body div div {
+    width: 600px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: var(--black-1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px var(--black-1-rgba);
+}
+
+form {
+    margin-top: 30px;
+    margin-bottom: 17px;
+    padding-top: 70px;
+}
+
+form hr {
+    width: 96%;
+    margin: auto;
+    margin-top: 15px;
+    border: 1px solid var(--purple-6);
+}
+
+form p:first-of-type {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form p {
+    width: 65%;
+    text-align: center;
+    margin: auto;
+    font-size: 13px;
+    color: var(--black-7);
+}
+
+form label {
+    display: block;
+    margin: auto;
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: var(--purple-7);
+}
+
+form input {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    height: 35px;
+    appearance: none;
+    border: none;
+    outline: none;
+    border: 3px solid var(--purple-5);
+    color: var(--purple-5);
+    border-radius: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: 1s;
+
+    &:hover, &:active, &:focus {
+        border-color: var(--purple-7);
+        color: var(--purple-7);
+    }
+}
+
+form label {
+    display: flex;
+    margin-bottom: 0;
+}
+
+form label input {
+    width: 90px;
+    display: flex;
+    transform: translateY(-5px);
+    margin-right: 0;
+    margin-top: 0;
+    right: 0;
+}
+
+form input:last-of-type {
+    display: block;
+}
+
+button {
+    margin: auto;
+    margin-top: 40px;
+    bottom: 50px;
+    display: block;
+    border: 3px solid var(--purple-5);
+    background: var(--black-1);
+    color: var(--green-10);
+    border-radius: 5em;
+    transition: 0.5s;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--purple-7);
+        color: var(--purple-2);
+        border-color: var(--purple-7);
+    }
+}
+
+#printOut {
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+
+#printOut div {
+    display: block;
+    justify-content: space-between;
+    align-content: center;
+    display: flex;
+    margin-top: 0px;
+    width: 60%;
+}
+
+#printOut div p:first-of-type {
+    font-size: 18px;
+    margin: 0;
+    text-align: left;
+}
+
+#printOut div p:last-of-type {
+    font-size: 18px;
+    text-align: right;
+}
+
+#printOut div:last-of-type p:first-of-type {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#printOut div:last-of-type p:last-of-type {
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: var(--purple-7);
+}
+
+div ~ hr {
+    display: block;
+    width: 95%;
+    margin: auto;
+    border: 1px dashed var(--purple-6);
+}
+
+/* Tablazat formazasa */
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 3px 4px;
+}
+
+table td {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--black-7);
+    background-color: var(--black-2);
+    cursor: pointer;
+}
+
+table tr:nth-child(4) td, table tr:nth-child(7) td {
+    border: none;
+    background-color: var(--black-1);
+    cursor: auto;
+    height: 7px;
+}
+
+.choosenSeat {
+    background-color: var(--purple-5);
+}
+
+@media only screen and (max-width: 650px) {
+    body > div {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    form label {
+        width: 90%;
+    }
+
+    form input {
+        width: 90%;
+    }
+}
