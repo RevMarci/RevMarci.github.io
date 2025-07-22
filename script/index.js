@@ -1,7 +1,7 @@
-// frontend/index.js
-
 const form = document.getElementById("chatForm");
 const input = document.getElementById("questionInput");
+
+const baseUrl = "https://portfolio-backend-k1ed.onrender.com";
 
 const messages = [
   {
@@ -17,7 +17,7 @@ form.addEventListener("submit", async function (e) {
   addMessage(value, 'user');
 
   try {
-    const response = await fetch('/ask', {
+    const response = await fetch(`${baseUrl}/ask`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
