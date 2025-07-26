@@ -1,8 +1,7 @@
 const form = document.getElementById('chatForm');
 const input = document.getElementById('questionInput');
 
-// const baseUrl = "https://portfolio-backend-k1ed.onrender.com";
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
 var messages = [
     {
