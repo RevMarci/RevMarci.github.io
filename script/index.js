@@ -50,9 +50,9 @@ form.addEventListener('submit', async function (e) {
     addUserMessage(value, 'user');
 
     const response = await callOpenRouter();
-    messages.push({ role: 'assistant', content: data.answer });
+    messages.push({ role: 'assistant', content: response });
     console.log('Received messages:', messages);
-    addAiMessage(data.answer, 'ai');
+    addAiMessage(response, 'ai');
 });
 
 async function callOpenRouter() {
