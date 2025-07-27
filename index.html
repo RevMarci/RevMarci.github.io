@@ -70,49 +70,139 @@
                 </div>
 
                 <h1 id="projects">Projektek</h1>
+
                 <div class="project">
-                    <h2>ProjectÁ 1</h2>
+                    <h2>Webshop</h2>
                     <div class="stack">
+                        <p>Angular</p>
+                        <p>TypeScript</p>
+                        <p>Firebase</p>
                         <p>html</p>
                         <p>css</p>
-                        <p>JavaScript</p>
                     </div>
+                    <img src="source/angular_webshop.png" alt="" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse tempor pretium felis, quis elementum tortor
-                        ultrices quis. Aenean a pretium nisi, nec condimentum
-                        lectus. Curabitur scelerisque leo quam, vel sagittis
-                        lacus mattis quis. Aliquam at tortor mi. Nulla lacus
-                        velit, congue varius nisi in, feugiat ultricies lorem.
-                        Donec suscipit sapien ut odio pulvinar, quis tincidunt
-                        augue scelerisque. Morbi nec metus non sapien lobortis
-                        volutpat.
+                        Egy 6 fős csoportmunka volt amiben egy élelmiszer áruház
+                        weboldalát csináltuk meg. Én a projekt során a backend
+                        oldalon dolgoztam. Az alkalmazást Firebase-en hostoltuk,
+                        és Firestore adatbázisát is hozzákötöttük.
                     </p>
-                    <button class="github">Github</button>
-                    <button class="live">Live</button>
                 </div>
 
                 <div class="project">
-                    <h2>ProjectÁ 1</h2>
+                    <h2>WebLed</h2>
                     <div class="stack">
+                        <p>Arduino</p>
+                        <p>C</p>
                         <p>html</p>
                         <p>css</p>
                         <p>JavaScript</p>
                     </div>
-                    <img src="source/london.jpg" alt="" />
+                    <img src="source/webled.jpg" alt="" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse tempor pretium felis, quis elementum tortor
-                        ultrices quis. Aenean a pretium nisi, nec condimentum
-                        lectus. Curabitur scelerisque leo quam, vel sagittis
-                        lacus mattis quis. Aliquam at tortor mi. Nulla lacus
-                        velit, congue varius nisi in, feugiat ultricies lorem.
-                        Donec suscipit sapien ut odio pulvinar, quis tincidunt
-                        augue scelerisque. Morbi nec metus non sapien lobortis
-                        volutpat.
+                        Ez volt az első nagyobb projektem. A projekt központi
+                        eleme egy ESP8266 volt (Arduinohoz hasonló mikrovezérlő
+                        Wifi-vel). Ezen volt hostolva egy Web oldal amit
+                        lokálisan hálózaton belülről el lehetett érni,
+                        irányítani, és rajzolni a 16*16-os LED kijelzőre.
                     </p>
-                    <button class="github">Github</button>
-                    <button class="live">Live</button>
+                </div>
+
+                <div class="project">
+                    <h2>Asteroids</h2>
+                    <div class="stack">
+                        <p>JavaScript</p>
+                        <p>html</p>
+                        <p>css</p>
+                    </div>
+                    <img src="source/asteroids.png" alt="" />
+                    <p>
+                        Egy főleg JavaScript canvasra épült egyszerű játék.
+                        Mindegyik elemnek (lovedék, aszteroida, játékos) saját
+                        osztály lett létrehozva, és ezeknek a példányaival
+                        számoltam, ezeket mozgattam. Ha egy elem lelép a
+                        képernyőről, akkor az a példány törölve lesz memória
+                        megtakarítás céljából.
+                    </p>
+                    <a
+                        class="github"
+                        href="https://github.com/RevMarci/Asteroids"
+                        target="_blank"
+                        >Github</a
+                    >
+                    <a
+                        class="live"
+                        href="https://revmarci.github.io/Asteroids/"
+                        target="_blank"
+                        >Live</a
+                    >
+                </div>
+
+                <div class="project">
+                    <h2>Vasút menetrend</h2>
+                    <div class="stack">
+                        <p>php</p>
+                        <p>Oracle SQL</p>
+                        <p>html</p>
+                        <p>css</p>
+                    </div>
+                    <img src="source/vasut.png" alt="" />
+                    <p>
+                        Egy Oracle adatbázisra fókuszált sok táblás projekt.
+                        Lehetett banne menetrendre, járatokra keresni, majd
+                        azokra jegyet venni. Az oldal rendelkezett
+                        bejelenkezéssel regisztrációval, illetve admin
+                        felülettel, ahol járatokat lehetett hozzáadni módosítani
+                        törölni, és statisztikákat lekérni a vásárlásokról.
+                    </p>
+                    <a
+                        class="github"
+                        href="https://github.com/RevMarci/vasutmenetrend"
+                        target="_blank"
+                        >Github</a
+                    >
+                </div>
+
+                <div class="project">
+                    <h2>Repülőjárat kereső</h2>
+                    <div class="stack">
+                        <p>html</p>
+                        <p>css</p>
+                        <p>php</p>
+                    </div>
+                    <img src="source/turul.png" alt="" />
+                    <p>
+                        Frontend heavy projekt, felxbox-okkal animációkkal,
+                        teljesen reszponzívan. Egy letisztult, átlátható oldalt
+                        volt a cél, repjegyek vásárlására.
+                    </p>
+                    <a
+                        class="github"
+                        href="https://github.com/RevMarci/web--automation-motibro"
+                        target="_blank"
+                        >Github</a
+                    >
+                </div>
+
+                <div class="project">
+                    <h2>Bejelentkezés automatizáció</h2>
+                    <div class="stack">
+                        <p>Node.js</p>
+                        <p>Puppeteer</p>
+                    </div>
+                    <p>
+                        Az első web automatizációra fókuszált mini projektem. Az
+                        edzéseimre jelenkezek be vele automatikusan és lekezel
+                        olyan szélsőséges eseteket mint amikor kijelentkezek
+                        valahonnan manuálisan akkor nem jelentkezik be oda
+                        megint. A megoldás azóta is működik.
+                    </p>
+                    <a
+                        class="github"
+                        href="https://github.com/RevMarci/web--automation-motibro"
+                        target="_blank"
+                        >Github</a
+                    >
                 </div>
 
                 <h1 id="studies">Tanulmányok</h1>
