@@ -3,23 +3,17 @@ const input = document.getElementById('questionInput');
 
 const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
-var messages = [
-    {
-        role: 'system',
-        content: 'Mindig rövid, tömör, lényegretörő választ adj!',
-    },
-    {
-        role: 'assistant',
-        content:
-            'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha mármi kérdésed van róla, akkor tedd fel és én válaszolok!',
-    },
-];
+const firstBotMessage =
+    'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha mármi kérdésed van róla, akkor tedd fel és én válaszolok!';
+var messages = [];
 
 // Run on page loading to wake up the backend
 wakeUp();
 
 async function wakeUp() {
     console.log('Wakeing up the backend...');
+
+    messages.push({ role: 'system', content: systemPrompt }); // systemPrompt is saved in another file
 
     try {
         const response = await fetch(`${baseUrl}/wake`, {
@@ -30,9 +24,8 @@ async function wakeUp() {
         const serverMessage = data.message;
         console.log(serverMessage);
 
-        if (serverMessage === 'Server is awake.') {
-            addAiMessage(messages[1].content, 'ai');
-        }
+        messages.push({ role: 'assistant', content: firstBotMessage });
+        addAiMessage(firstBotMessage, 'ai');
     } catch (error) {
         console.log(`Error on wake up: ${error}`);
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
