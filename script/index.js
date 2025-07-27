@@ -16,7 +16,11 @@ var messages = [
 ];
 
 // Run on page loading to wake up the backend
-(async () => {
+wakeUp();
+
+async function wakeUp() {
+    console.log('Wakeing up the backend...');
+
     try {
         const response = await fetch(`${baseUrl}/wake`, {
             method: 'GET',
@@ -31,8 +35,11 @@ var messages = [
         }
     } catch (error) {
         console.log(`Error on wake up: ${error}`);
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
+        console.log('Another try...');
+        wakeUp();
     }
-})();
+}
 
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -42,6 +49,14 @@ form.addEventListener('submit', async function (e) {
     console.log('Sent messages:', messages);
     addUserMessage(value, 'user');
 
+    const response = await callOpenRouter();
+    messages.push({ role: 'assistant', content: data.answer });
+    console.log('Received messages:', messages);
+    addAiMessage(data.answer, 'ai');
+});
+
+async function callOpenRouter() {
+    console.log('Call OpenRouter...');
     try {
         const response = await fetch(`${baseUrl}/ask`, {
             method: 'POST',
@@ -52,14 +67,25 @@ form.addEventListener('submit', async function (e) {
         });
 
         const data = await response.json();
-        messages.push({ role: 'assistant', content: data.answer });
 
-        console.log('Received messages:', messages);
-        addAiMessage(data.answer, 'ai');
+        if (data.answer === undefined) {
+            console.log(`OpenRouter response was undefined.`);
+            await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
+            console.log('Try again...');
+
+            return await callOpenRouter();
+        }
+
+        console.log('Successfull OpenRouter call!');
+        return data.answer;
     } catch (error) {
-        console.error('Hiba történt:', error);
+        console.log(`Error on OpenRouter call: ${error}`);
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
+        console.log('Try again...');
+
+        return await callOpenRouter();
     }
-});
+}
 
 function addUserMessage(message) {
     document.getElementById(
