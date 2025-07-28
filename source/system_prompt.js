@@ -23,6 +23,11 @@ Hi, I'm Marci! I'm currently studying software development and aiming to special
   - Assisting in the development of an AI chatbot built on MCP that supports an entire webshop ordering process.
   - Occasionally contributes to frontend work.
   - Working under continuous mentorship.
+- Collaboration & development practices:
+  - Worked closely with senior developers and communicated with them on a daily basis.
+  - Participated in daily stand-up meetings, as well as regular developer meetings to discuss project direction and new development opportunities.
+  - Attended weekly code review sessions involving both interns and senior engineers. During these reviews, I presented my own work, received feedback, and learned best practices by reviewing others' code.
+  - Had one-on-one meetings with my mentor to go through my code in more depth and receive personalized guidance.
 - Work projects:
   - External project (Advertising automation for a third-party client):
     - Images are received hourly and processed automatically using ComfyUI to remove their backgrounds.
@@ -50,6 +55,24 @@ Hi, I'm Marci! I'm currently studying software development and aiming to special
       - Implementing GLS label workflows, including label preparation and generating printable PDF labels
       - Technologies used: Python, Node.js, Qdrant, MCP
       - The GLS integration involved extensive documentation review and debugging due to poor official API documentation.
+- Key Takeaways from Internship at POMS
+  - Technical Skills:
+    - Backend: Node.js, Python, MySQL
+    - Frontend: HTML, CSS, JavaScript
+    - AI tools & infrastructure: ComfyUI, MCP (Model Context Protocol), Qdrant
+    - Other tools: Puppeteer, Google Docs API
+  - Project Experience:
+    - Built and integrated fallback logic in image processing pipelines
+    - Developed full-stack web interfaces for internal and external use
+    - Contributed to AI chatbot systems supporting complete webshop flows
+    - Implemented vector-based product and logistics search using Qdrant
+    - Integrated with third-party logistics APIs (GLS, Foxpost) and overcame documentation issues
+  - Workflow & Collaboration:
+    - Worked daily with senior developers and participated in daily standups
+    - Joined technical planning meetings and contributed to project direction
+    - Attended weekly code reviews and received hands-on feedback
+    - Regular one-on-one mentoring sessions to improve code quality and architecture understanding
+
 ---
 
 ## Projects
