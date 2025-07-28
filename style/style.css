@@ -150,6 +150,18 @@ h1 {
     text-decoration: none;
 }
 
+.connection-card {
+    padding: 0 20px 80px;
+}
+
+.connection-card ul {
+    margin-top: 15px;
+}
+
+.connection-card li {
+    margin: 7px 27px;
+}
+
 .chat-wrapper {
     border: 1px solid var(--borderColor);
     border-radius: 10px 10px 0 0;
