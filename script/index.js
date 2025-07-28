@@ -1,5 +1,6 @@
 const form = document.getElementById('chatForm');
 const input = document.getElementById('questionInput');
+const inputButton = document.getElementById('inputButton');
 
 const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
@@ -26,6 +27,7 @@ async function wakeUp() {
 
         messages.push({ role: 'assistant', content: firstBotMessage });
         addAiMessage(firstBotMessage, 'ai');
+        enableChatButton();
     } catch (error) {
         console.log(`Error on wake up: ${error}`);
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
@@ -35,6 +37,7 @@ async function wakeUp() {
 }
 
 form.addEventListener('submit', async function (e) {
+    disableChatButton();
     e.preventDefault();
     const value = input.value;
     input.value = '';
@@ -47,6 +50,7 @@ form.addEventListener('submit', async function (e) {
     messages.push({ role: 'assistant', content: response });
     console.log('Received messages:', messages);
     addAiMessage(response, 'ai');
+    enableChatButton();
 });
 
 async function callOpenRouter() {
@@ -108,4 +112,14 @@ function addAiMessage(message) {
     }
 
     type();
+}
+
+function disableChatButton() {
+    inputButton.setAttribute('disabled', '');
+    inputButton.classList.add('disabled');
+}
+
+function enableChatButton() {
+    inputButton.removeAttribute('disabled');
+    inputButton.classList.remove('disabled');
 }

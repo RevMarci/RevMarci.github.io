@@ -241,10 +241,20 @@ aside .chat-input-area {
     transition: var(--transitionTime);
 }
 
+.disabled {
+    color: var(--borderColor);
+}
+
 .chat-input-area form button:hover {
     border-color: var(--hoverColor);
     color: var(--hoverColor);
     cursor: pointer;
+}
+
+.disabled:hover {
+    border-color: var(--borderColor) !important;
+    color: var(--borderColor) !important;
+    cursor: no-drop !important;
 }
 
 .timeline {
