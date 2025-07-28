@@ -4,7 +4,7 @@ const input = document.getElementById('questionInput');
 const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
 const firstBotMessage =
-    'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha mármi kérdésed van róla, akkor tedd fel és én válaszolok!';
+    'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha bármi kérdésed van róla, akkor tedd fel és én válaszolok!';
 var messages = [];
 
 // Run on page loading to wake up the backend
@@ -37,6 +37,7 @@ async function wakeUp() {
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
     const value = input.value;
+    input.value = '';
     messages.push({ role: 'user', content: value });
 
     console.log('Sent messages:', messages);
