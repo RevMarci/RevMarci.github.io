@@ -1,0 +1,49 @@
+.project {
+    margin: 20px;
+    padding-bottom: 26px;
+    border: 1px solid var(--borderColor);
+    border-radius: 10px;
+    transition: var(--transitionTime);
+}
+
+.project:hover {
+    border-color: var(--hoverColor);
+}
+
+.project h2 {
+    margin: 10px 15px 0;
+}
+
+.stack {
+    display: flex;
+    margin: 5px 10px 10px;
+}
+
+.stack p {
+    margin: 5px !important;
+    padding: 4px 7px 5px;
+    font-size: small !important;
+    border: 1px solid var(--borderColor);
+    border-radius: 2em;
+}
+
+.project img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.project p {
+    margin: 5px 15px 15px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.project a {
+    background-color: transparent;
+    padding: 8px 10px 10px;
+    margin: 0 0 15px 15px;
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    text-decoration: none;
+}

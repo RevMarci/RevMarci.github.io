@@ -1,0 +1,94 @@
+.chat-wrapper {
+    border: 1px solid var(--borderColor);
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    height: calc(100vh - 96px);
+    width: 350px;
+}
+
+#chat {
+    max-height: calc(100% - 96px);
+    overflow-y: auto;
+    position: absolute;
+    bottom: 75px;
+    width: calc(100% - 2px);
+}
+
+#chat .ai,
+#chat .user {
+    margin: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+#chat p {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+#chat .ai {
+    text-align: left;
+}
+
+#chat .user {
+    margin-left: 12%;
+    text-align: right;
+    border: 1px solid var(--hoverColor);
+    border-radius: 7px 7px 0 7px;
+}
+
+aside .chat-input-area {
+    width: 336px;
+    height: 40px;
+    padding: 7px;
+    border: 1px solid var(--borderColor);
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+}
+
+.chat-input-area form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#questionInput {
+    width: 80%;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    transition: var(--transitionTime);
+}
+
+#questionInput:hover,
+#questionInput:focus {
+    border-color: var(--hoverColor) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.chat-input-area form button {
+    width: 15%;
+    background-color: transparent;
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    transition: var(--transitionTime);
+}
+
+.disabled {
+    color: var(--borderColor);
+}
+
+.chat-input-area form button:hover {
+    border-color: var(--hoverColor);
+    color: var(--hoverColor);
+    cursor: pointer;
+}
+
+.disabled:hover {
+    border-color: var(--borderColor) !important;
+    color: var(--borderColor) !important;
+    cursor: no-drop !important;
+}

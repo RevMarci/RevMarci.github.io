@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/chat.css" />
+        <link rel="stylesheet" href="style/project.css" />
+        <link rel="stylesheet" href="style/timeline.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        </style>
         <title>Révész Márton</title>
         <script src="source/system_prompt.js"></script>
         <script type="module" src="script/index.js"></script>
@@ -25,12 +31,7 @@
                     <h1 id="aboutMe">Révész Márton</h1>
                     <h2>Software Developer (in progress)</h2>
                     <h3>Szia, Marci vagyok!</h3>
-                    <p>
-                        Programozni tanulok, és backend irányban akarok majd
-                        egyszer elhelyezkedni, hogy hasznos dolgokat építhessek.
-                        Az oldalamon a rövid szummáját írtam le az eddigi
-                        tapasztalataimnak.
-                    </p>
+                    <p>Programozni tanulok, és backend irányban akarok majd egyszer elhelyezkedni, hogy hasznos dolgokat építhessek. Az oldalamon a rövid szummáját írtam le az eddigi tapasztalataimnak.</p>
                 </div>
 
                 <h1 id="experience">Tapasztalat</h1>
@@ -48,26 +49,9 @@
                                 <p>Qdrant</p>
                                 <p>AI</p>
                             </div>
-                            <p>
-                                Jelenleg gyakornokként dolgozom a POMS nevű
-                                vállalkozásnál, amely főként
-                                reklámautomatizálással foglalkozik.
-                            </p>
-                            <p>
-                                Részt veszek különböző AI technológiák
-                                kutatásában és implementálásában. Főként
-                                Node.js-t használunk, de előfordul Python is, és
-                                időnként a frontendbe is bele nyúlok, mindezt
-                                folyamatos mentorálás mellett.
-                            </p>
-                            <p>
-                                A munkám során készítettem egy belső
-                                alkalmazást, amely a beérkező, feldolgozott
-                                termékfotók ellenőrzését és újrafeldolgozását
-                                segíti. Jelenleg egy MCP-alapú AI chatbot
-                                fejlesztésében segítek, amely egy webshop teljes
-                                rendelési folyamatában képes lesz segíteni.
-                            </p>
+                            <p>Jelenleg gyakornokként dolgozom a POMS nevű vállalkozásnál, amely főként reklámautomatizálással foglalkozik.</p>
+                            <p>Részt veszek különböző AI technológiák kutatásában és implementálásában. Főként Node.js-t használunk, de előfordul Python is, és időnként a frontendbe is bele nyúlok, mindezt folyamatos mentorálás mellett.</p>
+                            <p>A munkám során készítettem egy belső alkalmazást, amely a beérkező, feldolgozott termékfotók ellenőrzését és újrafeldolgozását segíti. Jelenleg egy MCP-alapú AI chatbot fejlesztésében segítek, amely egy webshop teljes rendelési folyamatában képes lesz segíteni.</p>
                         </div>
                     </div>
                 </div>
@@ -84,12 +68,7 @@
                         <p>css</p>
                     </div>
                     <img src="source/angular_webshop.png" alt="" />
-                    <p>
-                        Egy 6 fős csoportmunka volt amiben egy élelmiszer áruház
-                        weboldalát csináltuk meg. Én a projekt során a backend
-                        oldalon dolgoztam. Az alkalmazást Firebase-en hostoltuk,
-                        és Firestore adatbázisát is hozzákötöttük.
-                    </p>
+                    <p>Egy 6 fős csoportmunka volt amiben egy élelmiszer áruház weboldalát csináltuk meg. Én a projekt során a backend oldalon dolgoztam. Az alkalmazást Firebase-en hostoltuk, és Firestore adatbázisát is hozzákötöttük.</p>
                 </div>
 
                 <div class="project">
@@ -102,13 +81,7 @@
                         <p>JavaScript</p>
                     </div>
                     <img src="source/webled.jpg" alt="" />
-                    <p>
-                        Ez volt az első nagyobb projektem. A projekt központi
-                        eleme egy ESP8266 volt (Arduinohoz hasonló mikrovezérlő
-                        Wifi-vel). Ezen volt hostolva egy Web oldal amit
-                        lokálisan hálózaton belülről el lehetett érni,
-                        irányítani, és rajzolni a 16*16-os LED kijelzőre.
-                    </p>
+                    <p>Ez volt az első nagyobb projektem. A projekt központi eleme egy ESP8266 volt (Arduinohoz hasonló mikrovezérlő Wifi-vel). Ezen volt hostolva egy Web oldal amit lokálisan hálózaton belülről el lehetett érni, irányítani, és rajzolni a 16*16-os LED kijelzőre.</p>
                 </div>
 
                 <div class="project">
@@ -119,26 +92,9 @@
                         <p>css</p>
                     </div>
                     <img src="source/asteroids.png" alt="" />
-                    <p>
-                        Egy főleg JavaScript canvasra épült egyszerű játék.
-                        Mindegyik elemnek (lovedék, aszteroida, játékos) saját
-                        osztály lett létrehozva, és ezeknek a példányaival
-                        számoltam, ezeket mozgattam. Ha egy elem lelép a
-                        képernyőről, akkor az a példány törölve lesz memória
-                        megtakarítás céljából.
-                    </p>
-                    <a
-                        class="github"
-                        href="https://github.com/RevMarci/Asteroids"
-                        target="_blank"
-                        >Github</a
-                    >
-                    <a
-                        class="live"
-                        href="https://revmarci.github.io/Asteroids/"
-                        target="_blank"
-                        >Live</a
-                    >
+                    <p>Egy főleg JavaScript canvasra épült egyszerű játék. Mindegyik elemnek (lovedék, aszteroida, játékos) saját osztály lett létrehozva, és ezeknek a példányaival számoltam, ezeket mozgattam. Ha egy elem lelép a képernyőről, akkor az a példány törölve lesz memória megtakarítás céljából.</p>
+                    <a class="github" href="https://github.com/RevMarci/Asteroids" target="_blank">Github</a>
+                    <a class="live" href="https://revmarci.github.io/Asteroids/" target="_blank">Live</a>
                 </div>
 
                 <div class="project">
@@ -150,20 +106,8 @@
                         <p>css</p>
                     </div>
                     <img src="source/vasut.png" alt="" />
-                    <p>
-                        Egy Oracle adatbázisra fókuszált sok táblás projekt.
-                        Lehetett banne menetrendre, járatokra keresni, majd
-                        azokra jegyet venni. Az oldal rendelkezett
-                        bejelenkezéssel regisztrációval, illetve admin
-                        felülettel, ahol járatokat lehetett hozzáadni módosítani
-                        törölni, és statisztikákat lekérni a vásárlásokról.
-                    </p>
-                    <a
-                        class="github"
-                        href="https://github.com/RevMarci/vasutmenetrend"
-                        target="_blank"
-                        >Github</a
-                    >
+                    <p>Egy Oracle adatbázisra fókuszált sok táblás projekt. Lehetett banne menetrendre, járatokra keresni, majd azokra jegyet venni. Az oldal rendelkezett bejelenkezéssel regisztrációval, illetve admin felülettel, ahol járatokat lehetett hozzáadni módosítani törölni, és statisztikákat lekérni a vásárlásokról.</p>
+                    <a class="github" href="https://github.com/RevMarci/vasutmenetrend" target="_blank">Github</a>
                 </div>
 
                 <div class="project">
@@ -174,17 +118,8 @@
                         <p>php</p>
                     </div>
                     <img src="source/turul.png" alt="" />
-                    <p>
-                        Frontend heavy projekt, felxbox-okkal animációkkal,
-                        teljesen reszponzívan. Egy letisztult, átlátható oldalt
-                        volt a cél, repjegyek vásárlására.
-                    </p>
-                    <a
-                        class="github"
-                        href="https://github.com/RevMarci/turul"
-                        target="_blank"
-                        >Github</a
-                    >
+                    <p>Frontend heavy projekt, felxbox-okkal animációkkal, teljesen reszponzívan. Egy letisztult, átlátható oldalt volt a cél, repjegyek vásárlására.</p>
+                    <a class="github" href="https://github.com/RevMarci/turul" target="_blank">Github</a>
                 </div>
 
                 <div class="project">
@@ -193,19 +128,8 @@
                         <p>Node.js</p>
                         <p>Puppeteer</p>
                     </div>
-                    <p>
-                        Az első web automatizációra fókuszált mini projektem. Az
-                        edzéseimre jelenkezek be vele automatikusan és lekezel
-                        olyan szélsőséges eseteket mint amikor kijelentkezek
-                        valahonnan manuálisan akkor nem jelentkezik be oda
-                        megint. A megoldás azóta is működik.
-                    </p>
-                    <a
-                        class="github"
-                        href="https://github.com/RevMarci/web--automation-motibro"
-                        target="_blank"
-                        >Github</a
-                    >
+                    <p>Az első web automatizációra fókuszált mini projektem. Az edzéseimre jelenkezek be vele automatikusan és lekezel olyan szélsőséges eseteket mint amikor kijelentkezek valahonnan manuálisan akkor nem jelentkezik be oda megint. A megoldás azóta is működik.</p>
+                    <a class="github" href="https://github.com/RevMarci/web--automation-motibro" target="_blank">Github</a>
                 </div>
 
                 <h1 id="studies">Tanulmányok</h1>
@@ -215,13 +139,7 @@
                         <div class="timeline-content">
                             <h2>SZTE TTIK Programtervező informatika</h2>
                             <p class="date">2023 - NOW</p>
-                            <p>
-                                A tanulmányaim során számos különböző területbe
-                                betekintést nyertem, többek között programozási
-                                nyelvekbe, adatbázis-kezelésbe és
-                                szoftverfejlesztési elvekbe is. Dolgoztam
-                                projekteken egyedül és csapatban is.
-                            </p>
+                            <p>A tanulmányaim során számos különböző területbe betekintést nyertem, többek között programozási nyelvekbe, adatbázis-kezelésbe és szoftverfejlesztési elvekbe is. Dolgoztam projekteken egyedül és csapatban is.</p>
                         </div>
                     </div>
 
@@ -230,34 +148,19 @@
                         <div class="timeline-content">
                             <h2>Déri Miksa</h2>
                             <p class="date">2018 - 2023</p>
-                            <p>
-                                Itt 4 év alatt stabil alapokat szereztem a
-                                programozói gondolkodásmódban és a legfontosabb
-                                technológiai alapelvek megértésében, illetve
-                                leérettségiztem.
-                            </p>
-                            <p>
-                                Az 5. évben kicsi betekintést tettem az
-                                elektronika világába is.
-                            </p>
+                            <p>Itt 4 év alatt stabil alapokat szereztem a programozói gondolkodásmódban és a legfontosabb technológiai alapelvek megértésében, illetve leérettségiztem.</p>
+                            <p>Az 5. évben kicsi betekintést tettem az elektronika világába is.</p>
                         </div>
                     </div>
                 </div>
 
                 <h1 id="connection">Kapcsolat</h1>
                 <div class="connection-card">
-                    <p>
-                        Ha felkeltettem az érdeklődésed, és szívesen dolgoznál
-                        velem, vagy meghallgatnál egy interjún, akkor így
-                        veheted fel velem a kapcsolatot:
-                    </p>
+                    <p>Ha felkeltettem az érdeklődésed, és szívesen dolgoznál velem, vagy meghallgatnál egy interjún, akkor így veheted fel velem a kapcsolatot:</p>
                     <ul>
                         <li>reveszmarton16@gmail.com</li>
                         <li>+36 70 222 4230</li>
-                        <li>
-                            Vagy írd le a chatbe az elérhetőséged, és én
-                            felveszem veled a kapcsolatot. ->
-                        </li>
+                        <li>Vagy írd le a chatbe az elérhetőséged, és én felveszem veled a kapcsolatot. -></li>
                     </ul>
                 </div>
             </main>
@@ -269,19 +172,8 @@
                     </div>
                     <div class="chat-input-area">
                         <form id="chatForm">
-                            <input
-                                type="text"
-                                autocomplete="off"
-                                id="questionInput"
-                            />
-                            <button
-                                id="inputButton"
-                                type="submit"
-                                class="disabled"
-                                disabled
-                            >
-                                Ask
-                            </button>
+                            <input type="text" autocomplete="off" id="questionInput" />
+                            <button id="inputButton" type="submit" class="disabled" disabled>Ask</button>
                         </form>
                     </div>
                 </aside>
