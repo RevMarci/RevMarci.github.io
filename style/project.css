@@ -46,4 +46,10 @@
     border: 1px solid var(--borderColor);
     border-radius: 5px;
     text-decoration: none;
+    transition: var(--transitionTime);
+}
+
+.project a:hover {
+    border-color: var(--hoverColor);
+    color: var(--hoverColor);
 }
