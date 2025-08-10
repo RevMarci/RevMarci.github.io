@@ -4,8 +4,7 @@ const inputButton = document.getElementById('inputButton');
 
 const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
-const firstBotMessage =
-    'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha bármi kérdésed van róla, akkor tedd fel és én válaszolok!';
+const firstBotMessage = 'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha bármi kérdésed van róla, akkor tedd fel és én válaszolok!';
 var messages = [];
 
 // Run on page loading to wake up the backend
@@ -86,9 +85,7 @@ async function callOpenRouter() {
 }
 
 function addUserMessage(message) {
-    document.getElementById(
-        'chat'
-    ).innerHTML += `<div class="user"><p>${message}</p></div>`;
+    document.getElementById('chat').innerHTML += `<div class="user"><p>${message}</p></div>`;
 }
 
 function addAiMessage(message) {
@@ -123,3 +120,16 @@ function enableChatButton() {
     inputButton.removeAttribute('disabled');
     inputButton.classList.remove('disabled');
 }
+
+// For nav bar in mobile view
+const hamMenu = document.querySelector('.ham-menu');
+const offScreenMenu = document.querySelector('nav');
+const timeLines = document.querySelectorAll('.timeline-item');
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+
+    timeLines.forEach((item) => {
+        item.classList.toggle('active');
+    });
+});
