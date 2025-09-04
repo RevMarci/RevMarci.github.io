@@ -4,7 +4,8 @@ const inputButton = document.getElementById('inputButton');
 
 const baseUrl = 'https://portfolio-backend-k1ed.onrender.com';
 
-const firstBotMessage = 'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha bármi kérdésed van róla, akkor tedd fel és én válaszolok!';
+const firstBotMessage =
+    'Szia! Én én egy AI chatbot vagyok akinek megvan minden tanítva Marciról! Ha bármi kérdésed van róla, akkor tedd fel és én válaszolok!';
 var messages = [];
 
 // Run on page loading to wake up the backend
@@ -132,4 +133,17 @@ hamMenu.addEventListener('click', () => {
     timeLines.forEach((item) => {
         item.classList.toggle('active');
     });
+});
+
+document.addEventListener('click', async function (event) {
+    const target = event.target;
+    if (target.tagName === 'A') {
+        await fetch(`${baseUrl}/click`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message: target.href }),
+        });
+    }
 });
