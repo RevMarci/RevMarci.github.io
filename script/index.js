@@ -54,7 +54,8 @@ form.addEventListener('submit', async function (e) {
 });
 
 async function callOpenRouter() {
-    console.log('Call OpenRouter...');
+    let calls = 1;
+    console.log('Call OpenRouter...', calls);
     try {
         const response = await fetch(`${baseUrl}/ask`, {
             method: 'POST',
@@ -79,7 +80,11 @@ async function callOpenRouter() {
     } catch (error) {
         console.log(`Error on OpenRouter call: ${error}`);
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
-        console.log('Try again...');
+        calls++;
+        if (calls > 5) {
+            return 'Sajnos valamilyen probléma van az AI szolgáltatójával... Próbálja újra később.';
+        }
+        console.log('Try again...', calls);
 
         return await callOpenRouter();
     }
