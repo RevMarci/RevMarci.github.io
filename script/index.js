@@ -53,8 +53,7 @@ form.addEventListener('submit', async function (e) {
     enableChatButton();
 });
 
-async function callOpenRouter() {
-    let calls = 1;
+async function callOpenRouter(calls = 1) {
     console.log('Call OpenRouter...', calls);
     try {
         const response = await fetch(`${baseUrl}/ask`, {
@@ -80,13 +79,12 @@ async function callOpenRouter() {
     } catch (error) {
         console.log(`Error on OpenRouter call: ${error}`);
         await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
-        calls++;
-        if (calls > 5) {
+        if (calls >= 5) {
             return 'Sajnos valamilyen probléma van az AI szolgáltatójával... Próbálja újra később.';
         }
-        console.log('Try again...', calls);
+        console.log('Try again...', calls + 1);
 
-        return await callOpenRouter();
+        return await callOpenRouter(calls + 1);
     }
 }
 
