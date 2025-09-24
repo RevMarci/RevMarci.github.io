@@ -70,6 +70,9 @@ async function callOpenRouter(calls = 1) {
             console.log(`OpenRouter response was undefined.`);
             await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
             console.log('Try again...', calls + 1);
+            if (calls >= 5) {
+                return 'Sajnos valamilyen probléma van az AI szolgáltatójával... Próbálja újra később.';
+            }
 
             return await callOpenRouter(calls + 1);
         }
