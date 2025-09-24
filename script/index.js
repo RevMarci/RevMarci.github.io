@@ -69,12 +69,12 @@ async function callOpenRouter(calls = 1) {
         if (data.answer === undefined) {
             console.log(`OpenRouter response was undefined.`);
             await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1s before another try
-            console.log('Try again...');
+            console.log('Try again...', calls + 1);
 
-            return await callOpenRouter();
+            return await callOpenRouter(calls + 1);
         }
 
-        console.log('Successfull OpenRouter call!');
+        console.log('Successful OpenRouter call!');
         return data.answer;
     } catch (error) {
         console.log(`Error on OpenRouter call: ${error}`);
